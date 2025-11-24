@@ -5,109 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LDC-DZ | Liens Rapides</title>
 
-<!-- Font Awesome pour les icônes -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
-/* ===== Reset & Base ===== */
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-body {background:#f4f4f9; color:#333;}
+/* ===== Reset ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif;}
 
-/* ===== Container ===== */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 2rem;
+body{
+    background:#f5f5f5;
+    color:#333;
 }
 
 /* ===== Header ===== */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+.header{
+    padding:2rem 1rem;
+    text-align:center;
+}
+.header h1{
+    font-size:3rem;
+    font-weight:900;
+    background: linear-gradient(90deg, #6A0DAD, #FF6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header p{
+    font-size:1.2rem;
+    margin-top:0.5rem;
+    color:#555;
+    max-width:600px;
+    margin-left:auto;margin-right:auto;
+}
+
+/* ===== Links ===== */
+.links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    padding:2rem;
+}
+.link-card{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    text-decoration:none;
+    background:white;
+    padding:1.2rem 2rem;
+    border-radius:12px;
+    min-width:190px;
+    justify-content:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+    font-weight:600;
+    border-left:6px solid transparent;
+    opacity:0;
+    transform:translateY(25px);
+    color: #6A0DAD; /* couleur initiale icône et texte */
+}
+.link-card i{
+    font-size:1.8rem;
     background: linear-gradient(90deg, #6A0DAD, #FF6600);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    color:#555;
-}
-
-/* ===== Quick Links ===== */
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.link-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #fff;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    text-decoration: none;
-    color: #6A0DAD;
-    font-weight: bold;
-    min-width: 160px;
-    justify-content: center;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.link-card i {
-    font-size: 1.5rem;
-}
-
-/* Hover effect */
-.link-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+/* Hover */
+.link-card:hover{
+    transform:translateY(-5px);
+    background:#fff7f0;
+    border-left:6px solid #FF6600;
     color:#FF6600;
-    background: #fff5f0;
+    box-shadow:0 10px 20px rgba(0,0,0,0.22);
+}
+.link-card:hover i{
+    background: linear-gradient(90deg, #6A0DAD, #FF6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* ===== Responsive ===== */
+/* Footer */
+.footer{
+    text-align:center;
+    padding:1.5rem;
+    color:#555;
+    font-size:.9rem;
+}
+
+/* Responsive */
 @media(max-width:768px){
-    h1{font-size:2.2rem;}
-    p{font-size:1rem;}
-    .link-card{min-width:140px;padding:0.8rem 1.5rem;}
+    .header h1{font-size:2.4rem;}
+    .link-card{min-width:150px;}
 }
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<div class="header">
     <h1>LDC-DZ</h1>
-    <p>Choisissez un lien pour accéder directement à nos réseaux et site web</p>
-    <div class="links">
-        <a href="https://www.ldc-dz.com" target="_blank" class="link-card"><i class="fas fa-globe"></i> <span>Site Web</span></a>
-        <a href="mailto:contact@ldc-dz.com" class="link-card"><i class="fas fa-envelope"></i> <span>Email</span></a>
-        <a href="tel:+213000000000" class="link-card"><i class="fas fa-phone"></i> <span>Téléphone</span></a>
-        <a href="https://www.facebook.com/ldcdz" target="_blank" class="link-card"><i class="fab fa-facebook"></i> <span>Facebook</span></a>
-        <a href="https://www.linkedin.com/company/ldc-dz" target="_blank" class="link-card"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a>
-        <a href="https://www.instagram.com/ldc_dz" target="_blank" class="link-card"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
-    </div>
+    <p>Accédez rapidement à nos plateformes officielles et canaux numériques.</p>
 </div>
 
+<div class="links">
+    <a href="https://www.ldc-dz.com" target="_blank" class="link-card">
+        <i class="fa-solid fa-globe"></i> <span>Site Web Officiel</span>
+    </a>
+
+    <a href="mailto:contact@ldc-dz.com" class="link-card">
+        <i class="fa-solid fa-envelope"></i> <span>Contact Email</span>
+    </a>
+
+    <a href="tel:+213000000000" class="link-card">
+        <i class="fa-solid fa-phone-volume"></i> <span>Support Téléphonique</span>
+    </a>
+
+    <a href="https://facebook.com" target="_blank" class="link-card">
+        <i class="fa-brands fa-facebook"></i> <span>Facebook</span>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank" class="link-card">
+        <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
+    </a>
+
+    <a href="https://instagram.com" target="_blank" class="link-card">
+        <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+    </a>
+</div>
+
+<div class="footer">© 2025 LDC-DZ — Tous droits réservés.</div>
+
 <script>
-// Animation d'apparition des liens
-window.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.link-card');
+window.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".link-card");
     cards.forEach((card, index) => {
         setTimeout(() => {
             card.style.opacity = 1;
-            card.style.transform = 'translateY(0)';
+            card.style.transform = "translateY(0)";
         }, index * 150);
     });
 });
